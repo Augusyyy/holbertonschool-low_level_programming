@@ -1,23 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - 10-print_comb2.c
+ * main - C program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
  *
-  *
  * Return: Always 0.
  */
-int main(void) {
-	int a,b;
+int main(void)
+{
+    int a, b;
 
-    for (a= '0'; a < '9'; a++) {
-        for (b=a+1; b <= '9'; b++){
+    for (a = '0'; a < '9'; a++)
+    {
+        for (b = a + 1; b <= '9'; b++)
+        {
             putchar(a);
             putchar(b);
 
-        if (a=='8' && b=='9'){
-            putchar(',');
-            putchar(' ');
-	}
+            if (a != 8 && b != 9){
+                putchar(',');
+                putchar(' ');
+            }
         }
     }
 
