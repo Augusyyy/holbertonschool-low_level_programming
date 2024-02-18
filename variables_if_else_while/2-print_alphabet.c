@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - - 2-print_alphabet.c: C program that prints the alphabet in lowercase, followed by a new line, using only the putchar function exactly twice.
+ * main - - 2-print_alphabet.c: main -2-print alphabet.c
 
  *
  * Return: Always 0.
