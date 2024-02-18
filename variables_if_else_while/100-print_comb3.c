@@ -1,30 +1,21 @@
 #include <stdio.h>
 
-/**
- * main - C program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    int a, b;
-
-    for (a = '0'; a < '9'; a++)
+    int i, j;
+    for (i = 0; i < 9; i++)
     {
-        for (b = a + 1; b <= '9'; b++)
+        for (j = i + 1; j < 10; j++)
         {
-            putchar(a);
-            putchar(b);
-
-            if (a == '8' && b == '9'){
-                continue;
+            putchar('0' + i); // 打印第一个数字
+            putchar('0' + j); // 打印第二个数字
+            if (i != 8 || j != 9)
+            {
+                putchar(','); // 打印逗号
+                putchar(' '); // 打印空格
             }
-            putchar(',');
-            putchar(' ');
         }
     }
-
-    putchar('\n');
-
-    return (0);
-}}
+    putchar('\n'); // 换行
+    return 0;
+}
