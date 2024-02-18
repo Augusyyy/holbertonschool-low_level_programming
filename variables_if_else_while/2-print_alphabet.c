@@ -2,7 +2,7 @@
 
 /**
  * main - - 2-print_alphabet.c: main -2-print alphabet.c
-
+ *
  *
  * Return: Always 0.
  */
