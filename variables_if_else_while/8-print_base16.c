@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-       	signed int a;
+	signed int a;
 	signed int c;
 
 	for (a = '0'; a <= '9'; a++)
