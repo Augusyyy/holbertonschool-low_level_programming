@@ -21,13 +21,13 @@ int main(void)
 				putchar(c);
 				if (a == '7' && b == '8' && c == '9')
 				{
-				       	continue;
+					continue;
 				}
 				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
-       	putchar('\n');
+	putchar('\n');
 	return (0);
 }
