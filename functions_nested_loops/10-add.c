@@ -7,10 +7,10 @@
  *
  * Return: The result of the addition.
  */
-int add(int m, int n)
+int add(int num1, int num2)
 {
 	int y;
 
-	y = m + n;
+	y = num1 + num2;
 	return (y);
 }
