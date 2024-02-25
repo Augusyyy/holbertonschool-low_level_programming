@@ -6,14 +6,15 @@
  *
  * Return: Always 0.
  */
-void main(void)
+int main(void)
 {
 	long liugod = 612852475143;
 	long maxPrimeResult = 0;
+	long a;
 	
 	while (liugod > 1)
 	{
-		for (long a = 2;a <= liugod; a++)
+		for (a = 2;a <= liugod; a++)
 		{
 			if (liugod % a == 0)
 			{
