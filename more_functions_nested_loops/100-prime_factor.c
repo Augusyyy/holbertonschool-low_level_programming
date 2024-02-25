@@ -14,11 +14,11 @@ int main(void)
 	
 	while (liugod > 1)
 	{
-		for (a = 2;a <= liugod; a++)
+		for (a = 2; a <= liugod; a++)
 		{
 			if (liugod % a == 0)
 			{
-				liugod = liugod/a;
+				liugod = liugod / a;
 				if (a > maxPrimeResult)
 				{
 					maxPrimeResult = a;
