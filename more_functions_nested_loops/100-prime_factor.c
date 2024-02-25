@@ -11,7 +11,7 @@ int main(void)
 	long liugod = 612852475143;
 	long maxPrimeResult = 0;
 	long a;
-	
+
 	while (liugod > 1)
 	{
 		for (a = 2; a <= liugod; a++)
