@@ -18,7 +18,7 @@ int main(void)
 		{
 			if (liugod % a == 0)
 			{
-				liugod = liugod / a;
+				liugod = liugod/a;
 				if (a > maxPrimeResult)
 				{
 					maxPrimeResult = a;
