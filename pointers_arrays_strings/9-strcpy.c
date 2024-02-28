@@ -7,9 +7,9 @@
  * @src: The source string to copy.
  * Return: A pointer to the destination string @dest.
  */
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest,char *src)
 {
-	char *p =  dest;
+	char *p = dest;
 
 	while(*src)
 	{
@@ -17,5 +17,8 @@ char *_strcpy(char *dest, char *src)
 		p++;
 		src++;
 	}
-	return (dest);
+	p++;
+	*p = '\0';
+
+	return dest;
 }
