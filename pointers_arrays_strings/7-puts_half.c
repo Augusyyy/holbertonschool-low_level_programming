@@ -4,13 +4,13 @@
  * puts_half - Prints half of a string.
  * @str: The string to be printed.
  */
-void puts_half(char*str)
+void puts_half(char *str)
 {
 	int len = 0;
 	char *p = str;
 	int half;
 	int index = 0;
-	
+
 	while (*p)
 	{
 		len++;
