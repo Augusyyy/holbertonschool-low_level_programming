@@ -1,14 +1,14 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * strcat - Concatenates the string pointed to by @src, including the terminating
- *          null byte, to the end of the string pointed to by @dest.
- * @dest: A pointer to the string to be concatenated upon.
- * @src: The source string to be appended to @dest.
- * Return: A pointer to the destination string @dest.
+ * _strncat - Concatenates two strings using at most
+ *            an inputted number of bytes from src.
+ * @dest: The string to be appended upon.
+ * @src: The string to be appended to dest.
+ * @n: The number of bytes from src to be appended to dest.
+ * Return: A pointer to the resulting string dest.
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *p = dest;
 
@@ -16,14 +16,12 @@ char *_strcat(char *dest, char *src)
 	{
 		p++;
 	}
-
-	while (*src)
+	for (int i = 0; i < n && *src; ++i)
 	{
 		*p = *src;
-		p++;
 		src++;
+		p++;
 	}
 	*p = '\0';
 	return  dest;
 }
-
