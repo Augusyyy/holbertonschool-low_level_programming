@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
-* _strncat - function for connecting
-* @dest: str1
-* @src: str2
-* @n:bytes
-* Return: dest
-*/
+ * _strcat - function for connecting strings
+ * @dest: 1st str
+ * @src: 2nd str
+ * Return: dest.
+ */
 char *_strcat(char *dest, char *src)
 {
 	char *p = dest;
