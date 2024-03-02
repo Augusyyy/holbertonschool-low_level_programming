@@ -7,7 +7,7 @@
 * @n:bytes
 * Return: dest
 */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *p = dest;
 
@@ -15,12 +15,11 @@ char *_strcat(char *dest, char *src)
 	{
 		p++;
 	}
-
-	while (*src)
+	for (int i = 0; i < n && *src; ++i)
 	{
 		*p = *src;
-		p++;
 		src++;
+		p++;
 	}
 	*p = '\0';
 	return (dest);
