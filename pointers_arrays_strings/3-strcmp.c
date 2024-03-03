@@ -10,8 +10,7 @@ int _strcmp(char *s1, char *s2)
 {
 	char p1, p2;
 
-	do
-	{
+	do{
 		p1 = *s1;
 		p2 = *s2;
 		s1++;
