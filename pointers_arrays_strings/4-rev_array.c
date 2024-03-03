@@ -12,8 +12,9 @@ void reverse_array(int *a, int n)
 	int *p = a;
 	int *q = a;
 	int temp;
+	int i;
 
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		q++;
 	}
