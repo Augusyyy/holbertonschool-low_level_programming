@@ -8,7 +8,7 @@
  * @height: The height of the 2-dimensional array.
  * Return: If width <= 0, height <= 0, or the function fails
  */
-nt **alloc_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int **twoD;
 	int hgt_index, wid_index;
