@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -10,32 +11,28 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *array;
-	int  len1 = 0, len2 = 0;
-	char *p = s1;
-	char *q = s2;
-	int i;
-	
-	while (*p)
-	{
-		len1++;
-		p++;
-	}
-	while (*q)
-	{
-		len2++;
-		q++;
-	}
-	array = malloc(len1 + len2 + 1);
-	if (array == NULL)
+	char *dest;
+	int index, concat_index = 0, len = 0;
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
+
+	dest = malloc(sizeof(char) * len);
+
+	if (dest == NULL)
 		return (NULL);
-	for (i = 0; i < len1; i++)
-	{
-		array[i] = s1[i];
-	}
-	for (i = 0; i < len2; i++)
-	{
-		array[len1 + i] = s2[i];
-	}
-	return (array);
+
+	for (index = 0; s1[index]; index++)
+		dest[concat_index++] = s1[index];
+
+	for (index = 0; s2[index]; index++)
+		dest[concat_index++] = s2[index];
+
+	return (dest);
 }
