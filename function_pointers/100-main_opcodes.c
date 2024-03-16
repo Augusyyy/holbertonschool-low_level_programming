@@ -1,30 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 
 /**
- * main - check the code
- *
+ * main - Prints the opcodes of itself.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  * Return: Always 0.
  */
-
-int exchange (int * arr)
+int main(int argc, char *argv[])
 {
-    if(arr == 9){
-        printf("%d",arr);
-    }
+	int bytes, index;
+	int (*address)(int, char **) = main;
+	unsigned char opcode;
 
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+
+	bytes = atoi(argv[1]);
+
+	if (bytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	for (index = 0; index < bytes; index++)
+	{
+		opcode = *(unsigned char *)address;
+		printf("%.2x", opcode);
+
+		if (index == bytes - 1)
+			continue;
+		printf(" ");
+
+		address++;
+	}
+
+	printf("\n");
+
+	return (0);
 }
 
-
-int main(void)
-{
-    int arr[] = { 1, 2, 3, 9, 5, 6, 7, 8, 4 };
-    int length = sizeof(arr) / sizeof(arr[0]);
-    exchange (arr);
-    for (int i = 0; i < length; i++)
-    {
-        printf("%d", arr[i]);
-    }
-}
