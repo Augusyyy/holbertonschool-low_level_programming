@@ -1,32 +1,22 @@
 #include "main.h"
 
 /**
- *_strncpy - function for copying
- *@dest: str1
- *@src: str2
- *@n: bytes
- *Return: dest
+ * _strncpy - Copy a string starting from index 0 of `dest`.
+ * @dest: string
+ * @src: string
+ * @n: number of chars to copy over
+ * Return: `dest` edited string
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *p = dest;
 	int i;
 
-	for (i = 0; i < n; i++)
-	{
-		*p = *src;
-		p++;
-		src++;
-		if (*src == '\0')
-		{
-			break;
-		}
-	}
-	while (i < n)
-	{
-		*p = '\0';
-		p++;
-		i++;
-	}
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+
+	for (; n > i; i++)
+		dest[i] = '\0';
+
 	return (dest);
 }
